@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tangier Tours with Mr Idrissi — Private Tours of Morocco</title>
+<meta name="description" content="Private guided tours in Tangier & Morocco with Mr Hamid El Idrissi — 20+ years of experience. Day tours, multi-day tours & shore excursions with chauffeured vehicles. Book on WhatsApp.">
+<link rel="icon" href="https://tangiertours.ma/wp-content/uploads/2024/01/tangier-tours-logo.jpeg">
+
+<!-- SEO / Social -->
+<meta property="og:title" content="Tangier Tours with Mr Idrissi — Private Tours of Morocco">
+<meta property="og:description" content="Personalized private tours of Tangier & Morocco. 20+ years of expertise, chauffeured vehicles, 24h response.">
+<meta property="og:image" content="https://tangiertours.ma/wp-content/uploads/2024/01/tangier-morocco-tours.jpg">
+<meta property="og:type" content="website">
+
+<!-- Schema.org : local business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Tangier Tours with Mr Idrissi",
+  "image": "https://tangiertours.ma/wp-content/uploads/2024/01/tangier-tours-logo.jpeg",
+  "telephone": "+212668702424",
+  "email": "contact@tangiertours.ma",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "36 Ave Moulay Ali Cherif",
+    "addressLocality": "Tangier",
+    "postalCode": "90000",
+    "addressCountry": "MA"
+  },
+  "url": "https://tangiertours.ma",
+  "sameAs": [
+    "https://facebook.com/tangiertours.ma",
+    "https://instagram.com/tangiertours.ma"
+  ],
+  "priceRange": "$$"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============ BASE ============ */
+:root{
+  --navy:#0d2438;         /* couleur principale : bleu profond (détroit de Tanger) */
+  --navy-soft:#16354f;
+  --sand:#e9a13b;         /* accent : ambre/sable marocain */
+  --sand-dark:#c9821e;
+  --wa:#1fae54;           /* CTA WhatsApp */
+  --wa-dark:#178a42;
+  --cream:#faf6ef;
+  --ink:#22303c;
+  --muted:#5d6f7e;
+  --radius:18px;
+  --shadow:0 12px 40px rgba(13,36,56,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.2;color:var(--navy)}
+section{padding:72px 20px}
+.wrap{max-width:1120px;margin:0 auto}
+
+/* petite étiquette au-dessus des titres */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;font-weight:600;color:var(--sand-dark)}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--sand)}
+.sec-title{font-size:clamp(1.7rem,4vw,2.5rem);margin:10px 0 14px}
+.sec-sub{color:var(--muted);max-width:640px;font-size:1.02rem}
+
+/* animation d'apparition au scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.on{opacity:1;transform:none}
+
+/* ============ NAV ============ */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s;padding:14px 20px}
+nav.scrolled{background:rgba(13,36,56,.92);backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(0,0,0,.18);padding:10px 20px}
+.nav-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;color:#fff}
+.brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.5)}
+.brand b{font-family:'Playfair Display',serif;font-size:1.12rem;letter-spacing:.02em}
+.brand small{display:block;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;opacity:.75;font-weight:400}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.92rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--sand)}
+.nav-cta{background:var(--wa);color:#fff;padding:9px 20px;border-radius:99px;font-weight:600;font-size:.9rem;display:inline-flex;align-items:center;gap:8px;transition:background .2s}
+.nav-cta:hover{background:var(--wa-dark)}
+.burger{display:none;background:none;border:none;color:#fff;font-size:1.7rem;cursor:pointer}
+
+/* menu mobile */
+.m-menu{position:fixed;inset:0;background:rgba(13,36,56,.97);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transform:translateX(100%);transition:transform .35s ease}
+.m-menu.open{transform:none}
+.m-menu a{color:#fff;font-size:1.3rem;font-family:'Playfair Display',serif}
+.m-close{position:absolute;top:22px;right:26px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer}
+
+/* ============ HERO ============ */
+header{min-height:100svh;display:flex;align-items:center;position:relative;color:#fff;
+  background:linear-gradient(180deg,rgba(9,26,41,.62) 0%,rgba(9,26,41,.35) 45%,rgba(9,26,41,.78) 100%),
+  url('https://tangiertours.ma/wp-content/uploads/2024/01/tangier-morocco-tours.jpg') center/cover no-repeat;
+  padding:120px 20px 90px}
+.hero{max-width:1120px;margin:0 auto;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.28);padding:8px 18px;border-radius:99px;font-size:.85rem;margin-bottom:22px}
+.hero-badge span{color:#7ee2a8}
+.hero h1{color:#fff;font-size:clamp(2.3rem,6vw,4rem);max-width:760px;margin-bottom:18px}
+.hero h1 em{color:var(--sand);font-style:italic}
+.hero p{max-width:560px;font-size:1.12rem;font-weight:300;opacity:.94;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:99px;font-weight:600;font-size:1rem;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-dark)}
+.btn-ghost{background:rgba(255,255,255,.12);backdrop-filter:blur(6px);border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.22)}
+.hero-trust{display:flex;gap:28px;flex-wrap:wrap;margin-top:46px;font-size:.9rem}
+.hero-trust div{display:flex;align-items:center;gap:9px;opacity:.92}
+.hero-trust svg{flex:none}
+
+/* ============ STATS ============ */
+.stats{background:var(--navy);color:#fff;padding:34px 20px}
+.stats-in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat b{font-family:'Playfair Display',serif;font-size:2rem;color:var(--sand);display:block}
+.stat span{font-size:.86rem;opacity:.82;letter-spacing:.04em}
+
+/* ============ TOURS ============ */
+.tour-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px}
+.tour{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .25s}
+.tour:hover{transform:translateY(-6px)}
+.tour-img{position:relative;height:220px;overflow:hidden}
+.tour-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.tour:hover .tour-img img{transform:scale(1.06)}
+.tour-tag{position:absolute;top:14px;left:14px;background:var(--sand);color:#3a2a08;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 13px;border-radius:99px}
+.tour-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.tour-body h3{font-size:1.25rem;margin-bottom:8px}
+.tour-body p{color:var(--muted);font-size:.94rem;flex:1}
+.tour-meta{display:flex;gap:14px;margin:14px 0 16px;font-size:.82rem;color:var(--navy-soft);font-weight:500}
+.tour-meta span{display:flex;align-items:center;gap:6px}
+.tour-link{color:var(--wa-dark);font-weight:600;font-size:.94rem;display:inline-flex;align-items:center;gap:7px}
+.tour-link:hover{gap:11px}
+.tour-link{transition:gap .2s}
+
+/* ============ WHY / ABOUT ============ */
+.about{background:#fff}
+.about-in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-photo{position:relative}
+.about-photo img{border-radius:var(--radius);box-shadow:var(--shadow);aspect-ratio:4/4.6;object-fit:cover;width:100%}
+.about-photo .exp{position:absolute;bottom:-20px;right:-14px;background:var(--navy);color:#fff;border-radius:16px;padding:18px 24px;text-align:center;box-shadow:var(--shadow)}
+.about-photo .exp b{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--sand);display:block}
+.about-photo .exp span{font-size:.78rem;opacity:.85}
+.about-txt h2{margin-bottom:16px}
+.about-txt p{color:var(--muted);margin-bottom:14px}
+.check-list{list-style:none;margin:22px 0 30px;display:grid;gap:12px}
+.check-list li{display:flex;gap:12px;align-items:flex-start;font-weight:500}
+.check-list svg{flex:none;margin-top:4px}
+
+/* ============ FLEET ============ */
+.fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.fleet-card{border-radius:var(--radius);overflow:hidden;position:relative;height:260px;box-shadow:var(--shadow)}
+.fleet-card img{width:100%;height:100%;object-fit:cover}
+.fleet-card figcaption{position:absolute;inset:auto 0 0 0;background:linear-gradient(transparent,rgba(9,26,41,.88));color:#fff;padding:38px 18px 16px;font-weight:500;font-size:.95rem}
+
+/* ============ REVIEWS ============ */
+.reviews{background:var(--navy);color:#fff}
+.reviews .sec-title,.reviews h3{color:#fff}
+.reviews .sec-sub{color:rgba(255,255,255,.75)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:42px}
+.rev{background:var(--navy-soft);border:1px solid rgba(255,255,255,.09);border-radius:var(--radius);padding:28px 26px}
+.stars{color:var(--sand);letter-spacing:3px;margin-bottom:14px;font-size:1.05rem}
+.rev p{font-size:.96rem;font-weight:300;opacity:.92;margin-bottom:18px}
+.rev b{font-size:.9rem}
+.rev small{display:block;opacity:.6;font-size:.78rem}
+.ta-link{display:inline-flex;align-items:center;gap:10px;margin-top:36px;background:#fff;color:var(--navy);padding:13px 26px;border-radius:99px;font-weight:600;transition:transform .2s}
+.ta-link:hover{transform:translateY(-2px)}
+
+/* ============ GALLERY ============ */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:12px;margin-top:40px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:12px;transition:transform .3s,filter .3s;cursor:pointer}
+.gal img:hover{transform:scale(1.03);filter:brightness(1.08)}
+.gal .tall{grid-row:span 2}
+
+/* ============ CONTACT ============ */
+.contact{background:#fff}
+.contact-in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:50px}
+.c-cards{display:grid;gap:16px;margin-top:30px}
+.c-card{display:flex;gap:16px;align-items:center;background:var(--cream);border-radius:14px;padding:18px 20px;transition:transform .2s}
+.c-card:hover{transform:translateX(5px)}
+.c-ico{width:46px;height:46px;border-radius:12px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex:none}
+.c-card b{display:block;font-size:.98rem;color:var(--navy)}
+.c-card span{font-size:.85rem;color:var(--muted)}
+/* formulaire -> ouvre WhatsApp avec message pré-rempli */
+.form{background:var(--cream);border-radius:var(--radius);padding:32px 28px;box-shadow:var(--shadow)}
+.form h3{margin-bottom:6px}
+.form p{font-size:.9rem;color:var(--muted);margin-bottom:22px}
+.form label{font-size:.82rem;font-weight:600;color:var(--navy);display:block;margin:14px 0 6px}
+.form input,.form select,.form textarea{width:100%;border:1.5px solid #dfd8ca;border-radius:10px;padding:12px 14px;font-family:inherit;font-size:.95rem;background:#fff;color:var(--ink)}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--sand)}
+.form button{width:100%;margin-top:22px;border:none;cursor:pointer;justify-content:center;font-family:inherit}
+iframe.map{width:100%;height:300px;border:0;border-radius:var(--radius);margin-top:40px;box-shadow:var(--shadow)}
+
+/* ============ FOOTER ============ */
+footer{background:#091a29;color:rgba(255,255,255,.72);padding:52px 20px 30px;font-size:.9rem}
+.foot-in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer h4{color:#fff;font-family:'Playfair Display',serif;margin-bottom:14px;font-size:1.05rem}
+footer a:hover{color:var(--sand)}
+.foot-links{list-style:none;display:grid;gap:9px}
+.socials{display:flex;gap:12px;margin-top:16px}
+.socials a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;transition:background .2s}
+.socials a:hover{background:var(--sand)}
+.copy{max-width:1120px;margin:36px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem;opacity:.6}
+
+/* bouton WhatsApp flottant */
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:40;width:60px;height:60px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 26px rgba(31,174,84,.5);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(31,174,84,.45)}70%{box-shadow:0 0 0 18px rgba(31,174,84,0)}100%{box-shadow:0 0 0 0 rgba(31,174,84,0)}}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:900px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:block}
+  .tour-grid,.fleet-grid,.rev-grid{grid-template-columns:1fr 1fr}
+  .about-in,.contact-in{grid-template-columns:1fr}
+  .foot-in{grid-template-columns:1fr 1fr}
+  .gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+}
+@media(max-width:600px){
+  section{padding:56px 16px}
+  .tour-grid,.fleet-grid,.rev-grid{grid-template-columns:1fr}
+  .stats-in{grid-template-columns:1fr 1fr;gap:26px}
+  .foot-in{grid-template-columns:1fr}
+  .about-photo .exp{right:10px;bottom:-16px;padding:14px 18px}
+  .hero-trust{gap:16px;font-size:.83rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<nav id="nav">
+  <div class="nav-in">
+    <a href="#" class="brand">
+      <img src="https://tangiertours.ma/wp-content/uploads/2024/01/tangier-tours-logo.jpeg" alt="Tangier Tours logo">
+      <div><b>Tangier Tours</b><small>with Mr&nbsp;Idrissi</small></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#tours">Tours</a></li>
+      <li><a href="#about">Why Us</a></li>
+      <li><a href="#fleet">Our Fleet</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="https://wa.me/212668702424?text=Hello%20Mr%20Idrissi%2C%20I%27d%20like%20to%20book%20a%20private%20tour%20in%20Tangier." target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.6 1 1.4 1.9 2.4 2.5.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .8-.3 1.5z"/></svg>
+      Book on WhatsApp
+    </a>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<!-- menu mobile plein écran -->
+<div class="m-menu" id="mmenu">
+  <button class="m-close" id="mclose" aria-label="Close">×</button>
+  <a href="#tours">Tours</a>
+  <a href="#about">Why Us</a>
+  <a href="#fleet">Our Fleet</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a class="btn btn-wa" href="https://wa.me/212668702424?text=Hello%20Mr%20Idrissi%2C%20I%27d%20like%20to%20book%20a%20private%20tour." target="_blank" rel="noopener">Book on WhatsApp</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<header>
+  <div class="hero">
+    <div class="hero-badge">★★★★★ <span>●</span> Rated Excellent by travelers on TripAdvisor</div>
+    <h1>Discover Morocco with a <em>local expert</em> by your side</h1>
+    <p>Private tours of Tangier, Chefchaouen, Asilah &amp; beyond — crafted personally by Mr Hamid El Idrissi, with over 20 years of guiding experience and chauffeured comfort from start to finish.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-wa" href="https://wa.me/212668702424?text=Hello%20Mr%20Idrissi%2C%20I%27d%20like%20to%20plan%20a%20private%20tour%20of%20Morocco." target="_blank" rel="noopener">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.6 1 1.4 1.9 2.4 2.5.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .8-.3 1.5z"/></svg>
+        Plan My Tour
+      </a>
+      <a class="btn btn-ghost" href="#tours">Explore Tours ↓</a>
+    </div>
+    <div class="hero-trust">
+      <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e9a13b" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 100% Private &amp; Personalized</div>
+      <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e9a13b" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Reply within 24 hours</div>
+      <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e9a13b" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> English-speaking guides</div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ STATS ============ -->
+<div class="stats">
+  <div class="stats-in">
+    <div class="stat"><b>20+</b><span>Years of Experience</span></div>
+    <div class="stat"><b>1000s</b><span>of Happy Travelers</span></div>
+    <div class="stat"><b>5★</b><span>TripAdvisor Reviews</span></div>
+    <div class="stat"><b>24h</b><span>Response Guarantee</span></div>
+  </div>
+</div>
+
+<!-- ============ TOURS ============ -->
+<section id="tours">
+  <div class="wrap">
+    <span class="eyebrow reveal">Our Experiences</span>
+    <h2 class="sec-title reveal">Tours designed around <em>you</em></h2>
+    <p class="sec-sub reveal">Every itinerary is tailored to your pace and interests — solo travelers, couples, families or cruise passengers. Tell us what you dream of, and we make it happen.</p>
+
+    <div class="tour-grid">
+      <!-- Tour 1 -->
+      <article class="tour reveal">
+        <div class="tour-img"><img src="https://tangiertours.ma/wp-content/uploads/2024/01/grand-socco-tangier-tours.jpg" alt="Grand Socco, Tangier" loading="lazy"><span class="tour-tag">Day Tour</span></div>
+        <div class="tour-body">
+          <h3>Tangier City Tour</h3>
+          <p>Kasbah, Medina, Grand Socco, the Caves of Hercules (2,500-year-old Neolithic caves), Cap Spartel and a camel ride on the Atlantic coast.</p>
+          <div class="tour-meta"><span>🕒 Full / Half day</span><span>🚘 Chauffeured</span></div>
+          <a class="tour-link" href="https://wa.me/212668702424?text=Hello%2C%20I%27m%20interested%20in%20the%20Tangier%20City%20Tour." target="_blank" rel="noopener">Ask about this tour →</a>
+        </div>
+      </article>
+      <!-- Tour 2 -->
+      <article class="tour reveal">
+        <div class="tour-img"><img src="https://tangiertours.ma/wp-content/uploads/2024/01/travel-morocco-tours-group.jpg" alt="Chefchaouen & Asilah day trip" loading="lazy"><span class="tour-tag">Day Tour</span></div>
+        <div class="tour-body">
+          <h3>Chefchaouen &amp; Asilah</h3>
+          <p>Wander the famous blue streets of Chefchaouen or the artistic seaside medina of Asilah — the two most beautiful day trips from Tangier.</p>
+          <div class="tour-meta"><span>🕒 Full day</span><span>🚘 Private car</span></div>
+          <a class="tour-link" href="https://wa.me/212668702424?text=Hello%2C%20I%27m%20interested%20in%20the%20Chefchaouen%20%2F%20Asilah%20day%20trip." target="_blank" rel="noopener">Ask about this tour →</a>
+        </div>
+      </article>
+      <!-- Tour 3 -->
+      <article class="tour reveal">
+        <div class="tour-img"><img src="https://tangiertours.ma/wp-content/uploads/2024/01/travel-morocco-tours-casablanca-1.jpg" alt="Casablanca and Rabat by train" loading="lazy"><span class="tour-tag">Day Tour</span></div>
+        <div class="tour-body">
+          <h3>Rabat &amp; Casablanca by High-Speed Train</h3>
+          <p>Ride Africa's fastest train from Tangier to explore the capital Rabat or iconic Casablanca — Hassan II Mosque included — and return the same day.</p>
+          <div class="tour-meta"><span>🕒 Full day</span><span>🚄 TGV Al Boraq</span></div>
+          <a class="tour-link" href="https://wa.me/212668702424?text=Hello%2C%20I%27m%20interested%20in%20the%20Rabat%20%2F%20Casablanca%20train%20tour." target="_blank" rel="noopener">Ask about this tour →</a>
+        </div>
+      </article>
+      <!-- Tour 4 -->
+      <article class="tour reveal">
+        <div class="tour-img"><img src="https://tangiertours.ma/wp-content/uploads/2024/01/morocco-desert-tours-merrakch.jpg" alt="Sahara desert multi-day tour" loading="lazy"><span class="tour-tag">Multi-Day</span></div>
+        <div class="tour-body">
+          <h3>Grand Morocco Tour — 5 to 7 Days</h3>
+          <p>From Tangier or Casablanca: Fes, Marrakech, the Atlas Mountains and a magical night under Sahara stars with a camel trek in the dunes.</p>
+          <div class="tour-meta"><span>🕒 5–7 days</span><span>🚙 4×4 / Mercedes</span></div>
+          <a class="tour-link" href="https://wa.me/212668702424?text=Hello%2C%20I%27m%20interested%20in%20the%205-7%20day%20Morocco%20tour." target="_blank" rel="noopener">Ask about this tour →</a>
+        </div>
+      </article>
+      <!-- Tour 5 -->
+      <article class="tour reveal">
+        <div class="tour-img"><img src="https://tangiertours.ma/wp-content/uploads/2024/01/tangier-tours-marina-morocco.jpg" alt="Tangier marina shore excursion" loading="lazy"><span class="tour-tag">Shore Excursion</span></div>
+        <div class="tour-body">
+          <h3>Cruise Shore Excursions</h3>
+          <p>Docking in Tangier? We meet you at the port, show you the very best of the city, and guarantee you're back on board comfortably on time.</p>
+          <div class="tour-meta"><span>🕒 Fits your schedule</span><span>⚓ Port pickup</span></div>
+          <a class="tour-link" href="https://wa.me/212668702424?text=Hello%2C%20I%27m%20arriving%20by%20cruise%20and%20interested%20in%20a%20shore%20excursion." target="_blank" rel="noopener">Ask about this tour →</a>
+        </div>
+      </article>
+      <!-- Tour 6 -->
+      <article class="tour reveal">
+        <div class="tour-img"><img src="https://tangiertours.ma/wp-content/uploads/2024/01/tangier-tours-idrissi-1.jpeg" alt="Custom private tour of Morocco" loading="lazy"><span class="tour-tag">Custom</span></div>
+        <div class="tour-body">
+          <h3>Your Custom Itinerary</h3>
+          <p>Spiritual visits to mosques, synagogues &amp; churches, food experiences, photography walks — tell us your dream and we'll design it, upon request.</p>
+          <div class="tour-meta"><span>🕒 You decide</span><span>✨ Fully bespoke</span></div>
+          <a class="tour-link" href="https://wa.me/212668702424?text=Hello%2C%20I%27d%20like%20a%20custom%20itinerary%20in%20Morocco." target="_blank" rel="noopener">Design my tour →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / WHY US ============ -->
+<section class="about" id="about">
+  <div class="about-in">
+    <div class="about-photo reveal">
+      <img src="https://tangiertours.ma/wp-content/uploads/2024/01/tangier-tours-idrissi-1.jpeg" alt="Mr Hamid El Idrissi, tour guide" loading="lazy">
+      <div class="exp"><b>20+</b><span>years guiding<br>Morocco</span></div>
+    </div>
+    <div class="about-txt reveal">
+      <span class="eyebrow">Meet Your Guide</span>
+      <h2 class="sec-title">Mr Hamid El Idrissi</h2>
+      <p>Founder, CEO and lead guide of Tangier Tours. For more than two decades, Hamid has welcomed travelers from around the world and shared the Morocco only locals know — its stories, its flavors, and its hidden corners.</p>
+      <p>With him, you're not following a flag in a crowd. You're traveling with a friend who happens to know everything.</p>
+      <ul class="check-list">
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1fae54" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 100% private tours — never shared with strangers</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1fae54" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Comfortable chauffeured vehicles, door to door</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1fae54" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Flexible itineraries — changed on the spot if you wish</li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1fae54" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Every question answered within 24 hours</li>
+      </ul>
+      <a class="btn btn-wa" href="https://wa.me/212668702424?text=Hello%20Mr%20Idrissi%2C%20I%27d%20like%20to%20talk%20about%20a%20tour." target="_blank" rel="noopener">Chat with Hamid</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLEET ============ -->
+<section id="fleet">
+  <div class="wrap">
+    <span class="eyebrow reveal">Travel in Comfort</span>
+    <h2 class="sec-title reveal">Our private fleet</h2>
+    <p class="sec-sub reveal">Luxury Mercedes Vito vans and 4×4 Land Rover vehicles — air-conditioned, spotless, and driven by professionals. Safe &amp; sound, from start to finish.</p>
+    <div class="fleet-grid">
+      <figure class="fleet-card reveal"><img src="https://tangiertours.ma/wp-content/uploads/2024/01/tangier-tours-private-cars-e1706809739763.jpg" alt="Mercedes Vito private van" loading="lazy"><figcaption>Mercedes Vito — ideal for families &amp; small groups</figcaption></figure>
+      <figure class="fleet-card reveal"><img src="https://tangiertours.ma/wp-content/uploads/2024/01/tangier-tours-private-car2-e1706809837871.jpg" alt="4x4 Land Rover" loading="lazy"><figcaption>4×4 Land Rover — built for desert &amp; mountain routes</figcaption></figure>
+      <figure class="fleet-card reveal"><img src="https://tangiertours.ma/wp-content/uploads/2024/01/tangier-tours-private-inside-cars-e1706810477707.jpg" alt="Vehicle interior" loading="lazy">
+        <figcaption>Spacious, air-conditioned interiors</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="wrap" style="text-align:center">
+    <span class="eyebrow reveal" style="justify-content:center">Traveler Stories</span>
+    <h2 class="sec-title reveal">Loved by travelers worldwide</h2>
+    <p class="sec-sub reveal" style="margin:0 auto">Real experiences from guests who explored Morocco with us.</p>
+
+    <!-- NOTE: remplacer par de vrais avis copiés depuis TripAdvisor -->
+    <div class="rev-grid" style="text-align:left">
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Hamid made our day in Tangier unforgettable. He knew every corner of the medina and treated us like family. Worth every dirham."</p>
+        <b>Sarah M.</b><small>United States — via TripAdvisor</small>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>"We came off the cruise ship nervous about the timing — the team met us at the port, showed us everything, and got us back with time to spare."</p>
+        <b>James &amp; Linda R.</b><small>United Kingdom — via TripAdvisor</small>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>"The 7-day tour to the Sahara was the trip of a lifetime. Perfect organization, wonderful car, and Hamid's stories made Morocco come alive."</p>
+        <b>Claudia B.</b><small>Germany — via TripAdvisor</small>
+      </div>
+    </div>
+    <a class="ta-link reveal" href="https://www.tripadvisor.com/" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#00aa6c"><circle cx="7" cy="13" r="3" fill="none" stroke="#00aa6c" stroke-width="2"/><circle cx="17" cy="13" r="3" fill="none" stroke="#00aa6c" stroke-width="2"/><path d="M2 9c3-2 7-2 10 0 3-2 7-2 10 0" fill="none" stroke="#00aa6c" stroke-width="2"/></svg>
+      Read all our reviews on TripAdvisor
+    </a>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="photos">
+  <div class="wrap">
+    <span class="eyebrow reveal">Moments</span>
+    <h2 class="sec-title reveal">Postcards from our tours</h2>
+    <div class="gal reveal">
+      <img class="tall" src="https://tangiertours.ma/wp-content/uploads/2024/01/tangier-morocco-tours.jpg" alt="Tangier view" loading="lazy">
+      <img src="https://tangiertours.ma/wp-content/uploads/2024/01/tangier-tours-marina-morocco.jpg" alt="Tangier marina" loading="lazy">
+      <img src="https://tangiertours.ma/wp-content/uploads/2024/01/morocco-desert-tours-merrakch.jpg" alt="Morocco desert" loading="lazy">
+      <img class="tall" src="https://tangiertours.ma/wp-content/uploads/2024/01/grand-socco-tangier-tours.jpg" alt="Grand Socco" loading="lazy">
+      <img src="https://tangiertours.ma/wp-content/uploads/2024/01/travel-morocco-tours-group.jpg" alt="Tour group" loading="lazy">
+      <img src="https://tangiertours.ma/wp-content/uploads/2024/01/travel-morocco-tours-casablanca-1.jpg" alt="Casablanca" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="contact-in">
+    <div class="reveal">
+      <span class="eyebrow">Get in Touch</span>
+      <h2 class="sec-title">Let's plan your Moroccan adventure</h2>
+      <p class="sec-sub">Message us on WhatsApp for the fastest reply — or call, email, or visit us in Tangier. We answer within 24 hours, guaranteed.</p>
+      <div class="c-cards">
+        <a class="c-card" href="https://wa.me/212668702424" target="_blank" rel="noopener">
+          <div class="c-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="#7ee2a8"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.6 1 1.4 1.9 2.4 2.5.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .8-.3 1.5z"/></svg></div>
+          <div><b>WhatsApp</b><span>+212 6 68 70 24 24 — instant reply</span></div>
+        </a>
+        <a class="c-card" href="tel:+212668702424">
+          <div class="c-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e9a13b" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div>
+          <div><b>Phone</b><span>+212 6 68 70 24 24</span></div>
+        </a>
+        <a class="c-card" href="mailto:contact@tangiertours.ma">
+          <div class="c-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e9a13b" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+          <div><b>Email</b><span>contact@tangiertours.ma</span></div>
+        </a>
+        <a class="c-card" href="https://maps.google.com/?q=36+Ave+Moulay+Ali+Cherif,+Tanger+90000,+Morocco" target="_blank" rel="noopener">
+          <div class="c-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e9a13b" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><b>Office</b><span>36 Ave Moulay Ali Cherif, Tangier 90000, Morocco</span></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Formulaire : construit le message et ouvre WhatsApp -->
+    <div class="form reveal">
+      <h3>Request your free quote</h3>
+      <p>Fill this in — it opens WhatsApp with your request ready to send.</p>
+      <form id="quoteForm">
+        <label for="fname">Your name</label>
+        <input id="fname" type="text" placeholder="e.g. Sarah Miller" required>
+        <label for="ftour">Which experience?</label>
+        <select id="ftour">
+          <option>Tangier City Tour</option>
+          <option>Chefchaouen &amp; Asilah</option>
+          <option>Rabat &amp; Casablanca by train</option>
+          <option>Multi-day tour (5–7 days)</option>
+          <option>Cruise shore excursion</option>
+          <option>Custom itinerary</option>
+        </select>
+        <label for="fdate">Preferred date(s)</label>
+        <input id="fdate" type="text" placeholder="e.g. 12–14 September">
+        <label for="fppl">Number of travelers</label>
+        <input id="fppl" type="number" min="1" placeholder="2">
+        <label for="fmsg">Anything else?</label>
+        <textarea id="fmsg" rows="3" placeholder="Special requests, hotel pickup, interests..."></textarea>
+        <button class="btn btn-wa" type="submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2z"/></svg>
+          Send via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- Carte Google Maps de l'adresse -->
+    <iframe class="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=36+Ave+Moulay+Ali+Cherif,+Tanger+90000,+Morocco&output=embed"
+      title="Tangier Tours office location"></iframe>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-in">
+    <div>
+      <h4>Tangier Tours with Mr Idrissi</h4>
+      <p>Private tours of Tangier &amp; Morocco since 2004. Personalized, comfortable, unforgettable.</p>
+      <div class="socials">
+        <a href="https://facebook.com/tangiertours.ma" target="_blank" rel="noopener" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://instagram.com/tangiertours.ma" target="_blank" rel="noopener" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul class="foot-links">
+        <li><a href="#tours">Day Tours</a></li>
+        <li><a href="#tours">Multi-Day Tours</a></li>
+        <li><a href="#tours">Shore Excursions</a></li>
+        <li><a href="#photos">Photo Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul class="foot-links">
+        <li><a href="tel:+212668702424">+212 6 68 70 24 24</a></li>
+        <li><a href="mailto:contact@tangiertours.ma">contact@tangiertours.ma</a></li>
+        <li>36 Ave Moulay Ali Cherif,<br>Tangier 90000, Morocco</li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">© <span id="year"></span> Tangier Tours with Mr Idrissi — All rights reserved.</div>
+</footer>
+
+<!-- Bouton WhatsApp flottant -->
+<a class="wa-float" href="https://wa.me/212668702424?text=Hello%20Mr%20Idrissi%2C%20I%27d%20like%20to%20book%20a%20private%20tour." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.6 1 1.4 1.9 2.4 2.5.3.2.5.1.7-.1s.8-.9 1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .8-.3 1.5z"/></svg>
+</a>
+
+<script>
+// nav : fond solide après scroll
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40));
+
+// menu mobile
+const mm = document.getElementById('mmenu');
+document.getElementById('burger').onclick = () => mm.classList.add('open');
+document.getElementById('mclose').onclick = () => mm.classList.remove('open');
+mm.querySelectorAll('a').forEach(a => a.onclick = () => mm.classList.remove('open'));
+
+// apparition au scroll
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+}), {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// formulaire -> message WhatsApp pré-rempli
+document.getElementById('quoteForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const msg = `Hello Mr Idrissi! My name is ${v('fname')}.%0A` +
+    `I'm interested in: ${v('ftour')}%0A` +
+    (v('fdate') ? `Dates: ${v('fdate')}%0A` : '') +
+    (v('fppl') ? `Travelers: ${v('fppl')}%0A` : '') +
+    (v('fmsg') ? `Notes: ${v('fmsg')}` : '');
+  open(`https://wa.me/212668702424?text=${msg}`, '_blank');
+});
+
+// année du footer
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
